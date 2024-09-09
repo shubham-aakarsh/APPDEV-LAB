@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11" />
+  </component>
+</project>
+
+
+ Develop a real-time application that uses any academic lecture video / audio  
+and convert into text.

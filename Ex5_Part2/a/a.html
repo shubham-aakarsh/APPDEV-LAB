@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Web Pages with DHTML</title>
+<style>
+    /* Style for frames */
+    #upperFrame {
+        width: 100%;
+        height: 50%;
+        border: 1px solid black;
+    }
+
+    #lowerFrame {
+        width: 100%;
+        height: 50%;
+        border: 1px solid black;
+    }
+
+    /* Style for images */
+    .image {
+        width: 30%;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .displayedImage {
+        width: 100%;
+    }
+</style>
+<script>
+    // Function to display image in the lower frame
+    function displayImage(imageSrc) {
+        document.getElementById('displayArea').innerHTML = '<img src="' + imageSrc + '" class="displayedImage" onclick="clearImage()">';
+    }
+
+    function clearImage() {
+        document.getElementById('displayArea').innerHTML = '';
+    }
+</script>
+</head>
+<body>
+
+<div id="upperFrame"></div>
+<div id="lowerFrame">
+    <div id="displayArea"></div>
+</div>
+
+<script>
+    var images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+
+    function loadImages() {
+        var imageHTML = '';
+        for (var i = 0; i < images.length; i++) {
+            imageHTML += '<img src="' + images[i] + '" class="image" onclick="displayImage(\'' + images[i] + '\')">';
+        }
+        document.getElementById('upperFrame').innerHTML = imageHTML;
+    }
+
+    window.onload = loadImages;
+</script>
+
+</body>
+</html>
+
+
+
+
+__________________________________________________________________________________ 
